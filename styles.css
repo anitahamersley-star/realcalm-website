@@ -573,15 +573,24 @@ a:hover { text-decoration: underline; }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: var(--rc-10);
   align-items: start;
   margin-bottom: var(--rc-10);
 }
 
-@media (max-width: 900px) {
-  .footer-grid { grid-template-columns: 1fr; }
+@media (max-width: 1100px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 .footer-title {
   font-family: var(--rc-font-heading);
