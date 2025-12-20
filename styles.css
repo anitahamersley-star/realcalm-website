@@ -451,6 +451,10 @@ a:hover { text-decoration: underline; }
   object-position: center;
 }
 
+.hero__media img {
+  opacity: 0.65; /* try 0.6–0.75 */
+}
+
 /* Soft overlay for legibility */
 .hero--image::after {
   content: "";
