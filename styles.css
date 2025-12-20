@@ -292,6 +292,23 @@ a:hover { text-decoration: underline; }
   text-decoration: none;
 }
 
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rc-3);
+}
+
+.brand__logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.brand__text {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
 .brand__mark {
   width: 40px;
   height: 40px;
