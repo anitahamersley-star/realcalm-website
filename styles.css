@@ -495,7 +495,13 @@ a:hover { text-decoration: underline; }
   backdrop-filter: blur(6px);
   border-radius: var(--rc-radius-lg);
   padding: var(--rc-8);
+  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.08);
 }
+
+.hero__text .lead {
+  line-height: 1.65;
+}
+
 
 
 /* ---------- Media Blocks ---------- */
