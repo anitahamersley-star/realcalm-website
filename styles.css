@@ -451,6 +451,9 @@ a:hover { text-decoration: underline; }
   object-position: center;
 }
 
+.hero__media img {
+  opacity: 0.95; /* image strength */
+}
 /* Soft overlay for legibility */
 .hero--image::after {
   content: "";
@@ -459,9 +462,9 @@ a:hover { text-decoration: underline; }
   background:
     linear-gradient(
       180deg,
-      rgba(251, 250, 248, 0.92) 0%,
-      rgba(251, 250, 248, 0.75) 45%,
-      rgba(251, 250, 248, 0.95) 100%
+      rgba(251, 250, 248, 0.80) 0%,
+      rgba(251, 250, 248, 0.45) 45%,
+      rgba(251, 250, 248, 0.85) 100%
     );
   z-index: 1;
 }
