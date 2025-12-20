@@ -462,9 +462,9 @@ a:hover { text-decoration: underline; }
   background:
     linear-gradient(
       180deg,
-      rgba(251, 250, 248, 0.80) 0%,
+      rgba(251, 250, 248, 0.90) 0%,
       rgba(251, 250, 248, 0.45) 45%,
-      rgba(251, 250, 248, 0.85) 100%
+      rgba(251, 250, 248, 0.95) 100%
     );
   z-index: 1;
 }
