@@ -310,7 +310,7 @@ a:hover { text-decoration: underline; }
 }
 
 .brand__logo {
-  height: 40px;
+  height: 52px;
   width: auto;
   display: block;
 }
@@ -488,7 +488,7 @@ a:hover { text-decoration: underline; }
 }
 
 .hero__text {
-  background: rgba(251, 250, 248, 0.65);
+  background: rgba(255, 255, 255, 0.65);
   border: 1px solid rgba(230, 226, 220, 0.7);
   backdrop-filter: blur(6px);
   border-radius: var(--rc-radius-lg);
@@ -656,8 +656,8 @@ a:hover { text-decoration: underline; }
 /* Clickable logo tiles */
 .logo-tile {
   width: 100%;
-  height: 72px; /* increased */
-  padding: 14px 18px;
+  height: 88px; /* increased */
+  padding: 16px 20px;
   border-radius: 16px;
 
   border: 1px solid rgba(230, 226, 220, 0.8);
@@ -684,8 +684,8 @@ a:hover { text-decoration: underline; }
 
 /* Logo sizing */
 .logo-tile__image {
-  max-height: 44px; /* increased */
-  max-width: 180px;
+  max-height: 56px; /* increased */
+  max-width: 200px;
   width: auto;
   height: auto;
   object-fit: contain;
