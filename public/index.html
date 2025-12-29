@@ -257,16 +257,16 @@
     </div>
 
     <div class="card">
-      <form class="form" id="contact-form" novalidate>
+      <form class="form" action="#" method="post">
         <div class="form-grid">
           <div>
             <label class="label" for="first-name">First name</label>
-            <input class="input" id="first-name" name="firstName" type="text" autocomplete="given-name" required>
+            <input class="input" id="first-name" name="first-name" type="text" autocomplete="given-name" required>
           </div>
 
           <div>
             <label class="label" for="last-name">Last name</label>
-            <input class="input" id="last-name" name="lastName" type="text" autocomplete="family-name" required>
+            <input class="input" id="last-name" name="last-name" type="text" autocomplete="family-name" required>
           </div>
         </div>
 
@@ -281,7 +281,6 @@
         </div>
 
         <div class="actions">
-          <p id="form-status" class="help" aria-live="polite"></p>
           <button class="btn btn--primary" type="submit">Send</button>
         </div>
       </form>
@@ -438,55 +437,6 @@
   </script>
 </footer>
 
-<script type="module">
-  const form = document.getElementById("contact-form");
-  const statusEl = document.getElementById("form-status");
-
-  // Real Calm project + AU region
-  const ENDPOINT = "https://australia-southeast1-realcalm-website.cloudfunctions.net/submitContactEnquiry";
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    statusEl.textContent = "";
-
-    const payload = {
-      firstName: form.firstName.value.trim(),
-      lastName: form.lastName.value.trim(),
-      email: form.email.value.trim(),
-      message: form.message.value.trim(),
-      website: form.website ? form.website.value : "",
-
-      pageUrl: location.href,
-      userAgent: navigator.userAgent,
-      tz: Intl.DateTimeFormat().resolvedOptions().timeZone
-    };
-
-    if (!payload.firstName || !payload.lastName || !payload.email || !payload.message) {
-      statusEl.textContent = "Please complete all fields.";
-      return;
-    }
-
-    try {
-      statusEl.textContent = "Sending…";
-
-      const res = await fetch(ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-
-      const data = await res.json().catch(() => ({}));
-
-      if (!res.ok) throw new Error(data.error || "Submission failed.");
-
-      form.reset();
-      statusEl.textContent = "Thank you. Your message has been sent.";
-    } catch (err) {
-      console.error(err);
-      statusEl.textContent = "Sorry, something went wrong. Please email anita@realcalm.com.au.";
-    }
-  });
-</script>
 
 
 </body>
