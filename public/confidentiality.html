@@ -35,7 +35,12 @@
   >
     </a>
 
-    <nav class="nav" aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle__icon" aria-hidden="true"></span>
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+
+    <nav id="primary-nav" class="nav" aria-label="Primary">
       <a href="/#about">About</a>
       <a href="/enquiries.html">Enquiries</a>
       <a href="/services.html">Services</a>
@@ -245,7 +250,16 @@
   </script>
 </footer>
 
+<script>
+  const navToggle = document.querySelector(".nav-toggle");
+  const primaryNav = document.getElementById("primary-nav");
+
+  navToggle?.addEventListener("click", () => {
+    const open = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", String(!open));
+    primaryNav?.classList.toggle("is-open", !open);
+  });
+</script>
 
 </body>
 </html>
-
