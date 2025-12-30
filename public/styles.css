@@ -19,7 +19,13 @@
 
   --rc-focus: #dacfbf; /* accessible focus ring */
 
-  
+   /* RGB helpers */
+  --rc-text-rgb: 17, 17, 17;
+  --rc-ink-rgb: 42, 41, 39;
+  --rc-sand-rgb: 218, 207, 191;
+  --rc-border-rgb: 230, 226, 220;
+  --rc-bg-rgb: 251, 250, 248;
+  --rc-surface-rgb: 255, 255, 255;
 
   /* Typography */
   --rc-font-heading: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
