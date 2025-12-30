@@ -10,14 +10,16 @@
   --rc-bg: #fbfaf8;
   --rc-surface: #ffffff;
   --rc-text: #111111;
-  --rc-muted: #4b5563;
-  --rc-border: #e6e2dc;
+  --rc-muted: #1c1c1b;
+  --rc-border: #E6E2DC;
 
-  --rc-primary: #3a5f78;   /* ocean blue */
-  --rc-primary-ink: #1f3f55;
+  --rc-primary: #111111;   
+  --rc-primary-ink: #2a2927;
   --rc-sand: #dacfbf;
 
-  --rc-focus: #1d4ed8; /* accessible focus ring */
+  --rc-focus: #dacfbf; /* accessible focus ring */
+
+  
 
   /* Typography */
   --rc-font-heading: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -100,10 +102,11 @@ a:hover { text-decoration: underline; }
 
 /* Accessible focus */
 :focus-visible {
-  outline: 3px solid rgba(29, 78, 216, 0.35);
+  outline: 3px solid rgba(218, 207, 191, 0.9); /* sand */
   outline-offset: 2px;
   border-radius: 10px;
 }
+
 
 /* ---------- Layout Utilities ---------- */
 
@@ -219,11 +222,11 @@ a:hover { text-decoration: underline; }
 .btn--secondary {
   background: transparent;
   color: var(--rc-primary);
-  border-color: rgba(58, 95, 120, 0.35);
+  border-color: rgba(42, 41, 39, 0.35);
 }
 
 .btn--secondary:hover {
-  background: rgba(58, 95, 120, 0.07);
+  background: rgba(42, 41, 39, 0.07);
   text-decoration: none;
 }
 
@@ -235,7 +238,7 @@ a:hover { text-decoration: underline; }
 }
 
 .btn--text:hover {
-  background: rgba(58, 95, 120, 0.07);
+  background: rgba(42, 41, 39, 0.07);
   text-decoration: none;
 }
 
@@ -448,9 +451,10 @@ a:hover { text-decoration: underline; }
 .textarea:focus,
 .select:focus {
   outline: none;
-  border-color: rgba(58, 95, 120, 0.55);
-  box-shadow: 0 0 0 4px rgba(58, 95, 120, 0.14);
+  border-color: rgba(218, 207, 191, 0.9);          /* sand */
+  box-shadow: 0 0 0 4px rgba(218, 207, 191, 0.35); /* sand halo */
 }
+
 
 .label {
   display: block;
@@ -504,7 +508,7 @@ a:hover { text-decoration: underline; }
 }
 
 .hero--image .lead {
-  color: #374151;
+  color: #1c1c1b;
 }
 
 .hero__media {
@@ -733,11 +737,12 @@ a:hover { text-decoration: underline; }
 }
 
 .logo-tile:focus-visible {
-  outline: 2px solid rgba(58, 95, 120, 0.35);
+  outline: 2px solid rgba(218, 207, 191, 0.9); /* sand */
   outline-offset: 4px;
   opacity: 0.9;
   transform: translateY(-1px);
 }
+
 
 /* Logo sizing */
 .logo-tile__image {
