@@ -54,9 +54,41 @@
   <main id="content">
 
     <!-- =====================
-         Hero Section
+         Notice Section (books closed)
          ===================== -->
 
+ <section class="hero hero--image">
+  <div class="hero__media" aria-hidden="true">
+    <img
+      src="/assets/img/blob-scene-haikei2.svg"
+      alt=""
+      loading="eager"
+    >
+  </div>
+
+  <div class="container hero__content">
+    <div class="stack hero__text">
+      <span class="eyebrow">Enquiries</span>
+      <h1 class="h1">No availability</h1>
+
+      <p class="lead">
+        My books are currently closed to new referrals. Thank you for your understanding. This will be reviewed in July 2026.
+      </p>
+
+      <div class="actions">
+        <!-- Intake form disabled while books are closed:
+        <a href="https://real-calm.splose.com/public-form/e9a32332-e5e3-4cf2-ab2a-26264802dcf9" class="btn btn--primary" target="_blank" rel="noopener">Complete intake form</a>
+        -->
+        <a href="/contact.html" class="btn btn--secondary">Have a question?</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- =====================
+         Hero Section (hidden while books are closed — restore at July 2026 review)
+         ===================== -->
+<!--
  <section class="hero hero--image">
   <div class="hero__media" aria-hidden="true">
     <img
@@ -82,6 +114,8 @@
     </div>
   </div>
 </section>
+-->
+
 
 
     <!-- =====================
@@ -118,7 +152,9 @@
     </div>
 
     <div class="actions" style="margin-top: var(--rc-8);">
+      <!-- Intake form disabled while books are closed:
       <a href="https://forms.gle/your-intake-form" class="btn btn--primary" target="_blank" rel="noopener">Complete intake form</a>
+      -->
       <a href="/fees.html" class="btn btn--secondary">View fees</a>
     </div>
   </div>
