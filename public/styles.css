@@ -319,8 +319,10 @@ a:hover { text-decoration: underline; }
 }
 
 .brand__logo {
-  height: 75px;
   width: auto;
+  height: auto;
+  max-height: 75px;
+  max-width: 100%;
   display: block;
 }
 
